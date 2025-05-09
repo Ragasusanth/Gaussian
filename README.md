@@ -9,17 +9,32 @@ To write a program to find the solution of a matrix using Gaussian Elimination.
 
 ## Algorithm
 
-### Step 1: Input the number of variables and initialize the augmented matrix.
+### Step 1: Start the Program.
 
-### Step 2: Fill in the augmented matrix with user inputs.
+### Step 2: Import required libraries:
 
-### Step 3: Check for zero pivot elements to avoid division by zero.
+numpy for array handling.
 
-### Step 4: Apply forward elimination to convert the matrix to upper triangular form.
+sys to exit the program in case of divide-by-zero.
 
-### Step 5: Perform back substitution to solve for the variables.
+### Step 3: Input the Size and Augmented Matrix
+Read the number of unknowns n.
 
-### Step 6: Display the values of the solution vector X.
+Create an augmented matrix a of size n × (n+1) and a solution vector X of size n.
+
+Take user input to fill the augmented matrix a.
+
+### Step 4:  Forward Elimination 
+
+For each pivot row i, check for divide-by-zero.
+
+For all rows below i, compute the ratio a[j][i]/a[i][i] and eliminate the coefficient below the pivot.
+
+### Step 5: Solve the last variable directly.
+
+### Step 6: Solve remaining variables using previously computed values.
+
+### Step 7: Print the values of all unknowns.
 
 ## Program:
 ```
